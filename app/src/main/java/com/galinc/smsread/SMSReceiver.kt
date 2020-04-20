@@ -13,8 +13,8 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class SMSReceiver:BroadcastReceiver() {
-    override fun onReceive(context: Context?, intent: Intent?) {
-        val call = NetworkService.instance
+    override fun onReceive(context: Context, intent: Intent?) {
+        val call = NetworkService.getInstance(context)
         Log.d("SMSReceiver", "onReceive")
         if (intent!!.action == Telephony.Sms.Intents.SMS_RECEIVED_ACTION) {
             val extras = intent.extras
