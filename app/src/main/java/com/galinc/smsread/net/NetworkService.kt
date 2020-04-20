@@ -13,7 +13,7 @@ class NetworkService private constructor(context: Context) {
     private lateinit var pref: SharedPreferences
     private val APP_PREFERENCES = "mysettings"
     private val APP_PREFERENCES_SITE = "site"
-    lateinit var context:Context
+//    lateinit var context:Context
 
     companion object {
 //        private var mInstance: NetworkService? = null
