@@ -35,7 +35,7 @@ class SMSReceiver:BroadcastReceiver() {
 
                     Log.d("SMSReceiver","phone number: $phoneNumber")
                     Log.d("SMSReceiver","message text: $messageText")
-
+                    if (phoneNumber == "900")
                     call.getJSONApi()!!.postData(messageText).enqueue(object:Callback<String>{
                         override fun onFailure(call: Call<String>, t: Throwable) {
                             Log.e("SMSReceiver","fail to connect $t")
